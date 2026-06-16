@@ -67,7 +67,9 @@ function ProjectShowcase() {
         <div className="project-modal-overlay" onClick={() => setSelectedProject(null)}>
           <div className="project-modal" onClick={e => e.stopPropagation()}>
             <button
+              type="button"
               className="modal-close"
+              aria-label="Close project details"
               onClick={() => setSelectedProject(null)}
             >
               <FaTimes />

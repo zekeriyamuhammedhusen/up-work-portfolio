@@ -2,10 +2,11 @@
 .project-showcase-section {
   padding: 80px 20px;
   background: #f8f9fa;
+  overflow-x: hidden;
 }
 
 .showcase-container {
-  max-width: 1200px;
+  width: min(100%, 1200px);
   margin: 0 auto;
 }
 
@@ -28,7 +29,7 @@
 /* Projects Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 30px;
   margin-bottom: 40px;
 }
@@ -41,6 +42,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid #eee;
+  min-width: 0;
 }
 
 .project-card:hover {
@@ -62,6 +64,7 @@
   margin: 0;
   color: #1a1a1a;
   flex: 1;
+  overflow-wrap: anywhere;
 }
 
 .project-type {
@@ -72,6 +75,9 @@
   border-radius: 20px;
   white-space: nowrap;
   font-weight: 600;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project-summary {
@@ -105,10 +111,11 @@
 .project-links {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .project-link {
-  flex: 1;
+  flex: 1 1 145px;
   padding: 10px 12px;
   text-decoration: none;
   color: #667eea;
@@ -159,8 +166,8 @@
   border-radius: 16px;
   padding: 40px;
   max-width: 600px;
-  width: 100%;
-  max-height: 80vh;
+  width: min(100%, 600px);
+  max-height: min(80vh, 760px);
   overflow-y: auto;
   position: relative;
   animation: slideUp 0.3s ease;
@@ -188,6 +195,11 @@
   color: #999;
   transition: all 0.3s ease;
   padding: 0;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-close:hover {
@@ -199,6 +211,8 @@
   font-size: 2rem;
   margin-bottom: 10px;
   color: #1a1a1a;
+  padding-right: 38px;
+  overflow-wrap: anywhere;
 }
 
 .modal-type {
@@ -248,7 +262,7 @@
 }
 
 .modal-link {
-  flex: 1;
+  flex: 1 1 0;
   padding: 12px 20px;
   text-decoration: none;
   border-radius: 8px;
@@ -319,5 +333,62 @@
 
   .modal-cta {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .project-showcase-section {
+    padding: 42px 16px;
+  }
+
+  .showcase-header {
+    margin-bottom: 28px;
+  }
+
+  .showcase-header h2 {
+    font-size: 1.55rem;
+    line-height: 1.2;
+  }
+
+  .showcase-header p {
+    font-size: 0.95rem;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-type {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .project-link {
+    flex-basis: 100%;
+  }
+
+  .project-modal-overlay {
+    align-items: flex-end;
+    padding: 12px;
+  }
+
+  .project-modal {
+    border-radius: 12px;
+    padding: 22px 18px;
+    max-height: 92vh;
+  }
+
+  .project-modal h2 {
+    font-size: 1.35rem;
+  }
+
+  .stack-item {
+    font-size: 0.82rem;
+    padding: 7px 12px;
   }
 }

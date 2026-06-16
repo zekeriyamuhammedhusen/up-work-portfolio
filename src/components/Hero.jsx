@@ -10,23 +10,16 @@ function Hero() {
             <span className="ping"></span>Available for new projects
           </div>
           <h1>
-            Building reliable web apps with the <span className="accent">MERN stack</span>.
+            Hi, I'm <span className="accent">Zekeriya Muhammedhusen </span> 
+              I am <p className="role-line">MERN Stack Developer</p>
           </h1>
-          <p className="role-line">
-            $ whoami → MERN Stack Developer based in Addis Ababa
-            <span className="cursor"></span>
-          </p>
-          <p className="lead">
-            I'm Zekeriya, a Computer Science graduate who builds RESTful APIs, responsive
-            interfaces, and database-driven applications with MongoDB, Express, React, and
-            Node.js. I write clean, maintainable code and communicate clearly — so your
-            project stays on track from kickoff to delivery.
-          </p>
+
+          <h5>
+            Building reliable web apps with <span className="accent">MERN stack</span>.
+          </h5>
+        
           <div className="hero-actions">
-            <a href="#contact" className="btn btn-primary">
-              Start a project →
-            </a>
-            <a href="#projects" className="btn btn-ghost">
+            <a href="#projects" className="btn btn-primary">
               View my work
             </a>
           </div>

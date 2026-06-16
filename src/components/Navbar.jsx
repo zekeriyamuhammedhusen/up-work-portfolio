@@ -20,7 +20,7 @@ function Navbar() {
         <a href="#home" className="brand" onClick={closeMenu}>
           <img src="/resource/images.png" alt="zekeriya" className="brand-logo" />
         </a>
-        <ul className={`nav-links ${open ? 'active' : ''}`}>
+        <ul id="primary-navigation" className={`nav-links ${open ? 'active' : ''}`}>
           {NAV_ITEMS.map((item) => (
             <li key={item.href}>
               <a href={item.href} onClick={closeMenu}>
@@ -39,7 +39,10 @@ function Navbar() {
         </a>
         <button
           className="menu-toggle"
+          type="button"
           aria-label="Toggle navigation"
+          aria-expanded={open}
+          aria-controls="primary-navigation"
           onClick={() => setOpen((prev) => !prev)}
         >
           ☰
