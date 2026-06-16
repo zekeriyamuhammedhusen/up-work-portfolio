@@ -1,0 +1,139 @@
+/* Upwork Rates Section */
+.upwork-rates-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+}
+
+.rates-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rates-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.rates-header p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 40px;
+}
+
+.rates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.rate-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.rate-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+.rate-icon-wrapper {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.rate-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.rate-content h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rate-content p {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.rates-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.cta-button {
+  padding: 14px 32px;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.upwork-btn {
+  background: white;
+  color: #667eea;
+}
+
+.upwork-btn:hover {
+  background: transparent;
+  color: white;
+  transform: scale(1.05);
+}
+
+.email-btn {
+  background: transparent;
+  color: white;
+}
+
+.email-btn:hover {
+  background: white;
+  color: #667eea;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .upwork-rates-section {
+    padding: 50px 15px;
+  }
+
+  .rates-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .rates-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .rate-card {
+    padding: 20px 15px;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
